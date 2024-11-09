@@ -7,9 +7,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
+from google.colab import files
+uploaded = files.upload()
 
-# loading the data from sklearn
-breast_cancer_dataset = sklearn.datasets.load_breast_cancer()
+# loading the data from the dataset
+breast_cancer_dataset = pd.read_csv('breast_cancer_data.csv')
 print(breast_cancer_dataset)
 
 # loading the data to a data frame
